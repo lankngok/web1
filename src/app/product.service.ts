@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 
-const url = "http://localhost:3110/products"
-const urlCate = "http://localhost:3110/category"
+const url = "http://localhost:3000/data"
+const urlCate = "http://localhost:3000/category"
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class ProductService {
     return this.http.get<any>(`${urlCate}`)
   }
   filter_pro(id: any): Observable<any> {
-    return this.http.get<any>(`${url}/?prod_id=${id}`)
+    return this.http.get<any>(`${url}/?cate_id=${id}`)
   }
   detail(id: number): Observable<any> {
     return this.http.get<any>(`${url}/${id}`)

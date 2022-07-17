@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "web3": {
+    "angulardemo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/web3",
+            "outputPath": "dist/angulardemo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "web3:build:production"
+              "browserTarget": "angulardemo:build:production"
             },
             "development": {
-              "browserTarget": "web3:build:development"
+              "browserTarget": "angulardemo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "web3:build"
+            "browserTarget": "angulardemo:build"
           }
         },
         "test": {
@@ -90,15 +90,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "9d3b77cc-3e8a-41d5-8ff1-5afff369429c"
+    "analytics": "45f3ba77-ddce-475c-b586-b92ddfbfe57b"
   }
 }
